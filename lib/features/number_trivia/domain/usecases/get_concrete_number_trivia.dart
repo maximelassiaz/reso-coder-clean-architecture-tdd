@@ -16,7 +16,6 @@ class GetConcreteNumberTriviaUseCase implements UseCase<NumberTrivia, Params> {
     Params params,
   ) async {
     final result = await repository.getConcreteNumberTrivia(params.number);
-    print('getConcreteNumberTriviaUseCase: $result');
     return result;
   }
 }

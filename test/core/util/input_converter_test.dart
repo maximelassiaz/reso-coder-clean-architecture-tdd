@@ -16,7 +16,7 @@ void main() {
         // arrange
         const str = '123';
         // act
-        final result = inputConverter.stringToUnsignedInteger(str);
+        final result = await inputConverter.stringToUnsignedInteger(str);
         // assert
         expect(result, const Right(123));
       },
@@ -28,7 +28,7 @@ void main() {
         // arrange
         const str = 'abc';
         // act
-        final result = inputConverter.stringToUnsignedInteger(str);
+        final result = await inputConverter.stringToUnsignedInteger(str);
         // assert
         expect(result, Left(InvalidInputFailure()));
       },
@@ -39,7 +39,7 @@ void main() {
         // arrange
         const str = '-123';
         // act
-        final result = inputConverter.stringToUnsignedInteger(str);
+        final result = await inputConverter.stringToUnsignedInteger(str);
         // assert
         expect(result, Left(InvalidInputFailure()));
       },
